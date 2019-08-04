@@ -19,9 +19,6 @@ namespace OnlineStore.Controllers
             _laptopRep = laptopRep;
         }
 
-        //[Route("Home/Index")]
-
-
         public ViewResult Index()
         {
             var homeLaptops = new HomeViewModel
