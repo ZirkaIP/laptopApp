@@ -1,0 +1,11 @@
+﻿@model HomeViewModel
+
+<h2>Top deals</h2>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Laptop favlap in Model.FavLaptops)
+        {
+            @Html.Partial("AllLaptops", favlap)
+        }
+    }
+</div>
