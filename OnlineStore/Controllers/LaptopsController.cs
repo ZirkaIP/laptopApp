@@ -57,10 +57,7 @@ namespace OnlineStore.Controllers
                 {
                     laptops = allLaptops.Laptops.Where(i => i.Category.CategoryName.Equals("Lenovo")).OrderBy(i => i.Price);
                 }
-
                 currCategory = _category;
-
-               
             }
 
             var lapObj = new LaptopListViewModels

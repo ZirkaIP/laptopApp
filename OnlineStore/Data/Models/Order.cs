@@ -18,7 +18,8 @@ namespace OnlineStore.Data.Models
         public string Name { get; set; }
 
         [Display(Name = "Input your surname")]
-        [StringLength(3)]
+        [StringLength(20)]
+        [MinLength(1)]
         [Required(ErrorMessage = "Surname must be longer than 3 letters")]
         public string Surname { get; set; }
 
@@ -30,7 +31,8 @@ namespace OnlineStore.Data.Models
         public string Phone { get; set; }
 
         [Display(Name = "Input your address")]
-        [StringLength(10)]
+        [StringLength(60)]
+        [MinLength(5)]
         [Required(ErrorMessage = "Here might be at least characters")]
         public string Address { get; set; }
 

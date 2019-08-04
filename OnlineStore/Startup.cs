@@ -64,10 +64,6 @@ namespace OnlineStore
                         content = scope.ServiceProvider.GetRequiredService<AppDbContent>();
                         DbObjects.Initial(content);
                     }
-
-                
-
-
         }
     }
 }
