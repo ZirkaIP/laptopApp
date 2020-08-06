@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using System.Web.Mvc;
 using OnlineStore.Data.Interfaces;
 using OnlineStore.Data.Models;
 using OnlineStore.ViewModels;
+using Controller = Microsoft.AspNetCore.Mvc.Controller;
+using ViewResult = Microsoft.AspNetCore.Mvc.ViewResult;
 
 namespace OnlineStore.Controllers
 {
+    [RoutePrefix("laptops")]
     public class LaptopsController : Controller
     {
         private readonly IAllLaptops allLaptops;
@@ -20,15 +23,15 @@ namespace OnlineStore.Controllers
             laptopsCategory = iLaptopsCategory;
         }
 
-        [Route("Laptops/List")]
-        [Route("Laptops/List/{category}")]
+        [Microsoft.AspNetCore.Mvc.Route("list")]
+        [Microsoft.AspNetCore.Mvc.Route("list/{category}")]
 
         public ViewResult List(string category)
         {
             string _category = category;
             IEnumerable<Laptop> laptops = null;
-            string currCategory = "";
-            string LaptoppCategory;
+            string currCategory = String.Empty;
+            string LaptopCategory;
             if (string.IsNullOrEmpty(category))
             {
                 laptops = allLaptops.Laptops.OrderBy(i => i.Id);

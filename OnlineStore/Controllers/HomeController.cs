@@ -19,6 +19,7 @@ namespace OnlineStore.Controllers
             _laptopRep = laptopRep;
         }
 
+        [HttpGet]
         public ViewResult Index()
         {
             var homeLaptops = new HomeViewModel

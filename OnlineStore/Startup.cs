@@ -53,8 +53,8 @@ namespace OnlineStore
                 app.UseMvcWithDefaultRoute();
                 app.UseMvc(routes =>
                   {
-                      routes.MapRoute(name: "default", template: "Home/Index/{id?}");
-                      routes.MapRoute(name: "categoryFilter", template: " Laptops/{action}/{Category?}", defaults: new { Controller = "Laptops", action="List"});
+                      routes.MapRoute(name: "default", template: "home/index/{id?}");
+                      routes.MapRoute(name: "categoryFilter", template: " laptops/{action}/{Category?}", defaults: new { Controller = "Laptops", action="List"});
                   });
 
                     AppDbContent content;

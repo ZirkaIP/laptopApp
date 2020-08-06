@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using OnlineStore.Data.Models;
 
 namespace OnlineStore.Data
@@ -13,7 +9,6 @@ namespace OnlineStore.Data
         {
             
         }
-
         public  DbSet<Laptop> Laptop { get; set; }
         public  DbSet<Category> Category { get; set; }
         public  DbSet<ShopCartItem> ShopCartItem { get; set; }
